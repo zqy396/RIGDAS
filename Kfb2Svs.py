@@ -6,14 +6,14 @@ from glob import glob
 
 def main():
     #Set  your 'src_folder_name' , 'des_folder_name' and 'level'
-    src_folder_name = r'E:\\常州二院ccRCC\\'#KFB文件所在文件夹
-    des_folder_name = r'E:\\1\\'       #保存SVS文件的文件夹
+    src_folder_name = r'E:\\ccRCC_kfb\\'#The folder where the KFB file resides
+    des_folder_name = r'E:\\ccRCC_svs\\'       #The folder where SVS files are saved
     level = 9
     # argvs = sys.argv
     # if len(argvs) != 4:
     #     raise AttributeError('Example: convert_kfb2svs.py [src_folder_name] [des_folder_name] [level]')
 
-    exe_path = r'E:\\x86\\KFbioConverter.exe' #下载的转换程序所在文件夹
+    exe_path = r'E:\\x86\\KFbioConverter.exe' #The folder where the conversion program is downloaded
     if not os.path.exists(exe_path):
         raise FileNotFoundError('Could not find convert library.')
 
