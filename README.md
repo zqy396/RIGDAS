@@ -17,10 +17,12 @@ WSI data and corresponding detailed information (.csv file) shoule be ready. The
 
 # 1.WSI segmentation and patching
 The first step is to segment the tissue and crop patches from the tissue region. We referenced CLAM's WSI processing method. CLAM provide a robust WSI segmentation and patching implementation. You can refer to CLAM for more detailed information.
-python create_patches_fp.py --source DATA_DIRECTORY --datainfo DATA_INFO_DIRECTORY --patch_size 4096 --step_size 4096 --save_dir PATCH_DIRECTORY --patch_level 0 --seg --stitch --patch
+```python create_patches_fp.py --source DATA_DIRECTORY --datainfo DATA_INFO_DIRECTORY --patch_size 4096 --step_size 4096 --save_dir PATCH_DIRECTORY --patch_level 0 --seg --stitch --patch```
 
 # 2.Patch feature extraction
 For each ROI (patch with size of 2048×2048), you need extract features of patches (usually 256×256) within each ROI at three distinct magnification levels (20x,10x,5x). Then the fearures can be put into the ROAM model for training.
 
 Run the following commond in ./data_prepare/ directory for feature extraction:
+
+```python extract_feature_patch.py --data_h5_dir PATCH_DIRECTORY --data_slide_dir DATA_DIRECTORY --csv_path DATA_INFO_DIRECTORY --feat_dir FEAT_DIRECTORY --pretrained_model ImageNet --is_stain_norm```
 
