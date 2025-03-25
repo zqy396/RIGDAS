@@ -38,15 +38,15 @@ RIGDAS employs a 5-fold cross validation on the training dataset, followed by te
 
 We provide examples of splits in ./data_prepare/data_split/ and reference code in ./data_prepare/create_splits.ipynb.
 
-# Training RIGDAS model
+# 4.Training RIGDAS model
 
 ```python main.py configs/ccRCC.ini s1 exp_code```
 
-# Test
+# 5.Test
 
 ```python main.py configs/ccRCC.ini s1``` 
 
-# Visualization
+# 6.Visualization
 
 Run the following commond to generate roi-level visualization resutls:
 
