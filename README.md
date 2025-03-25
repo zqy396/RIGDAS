@@ -13,7 +13,7 @@
 # Abstract
 The pathological assessment of International Society of Urological Pathology (ISUP) nuclear grading is crucial for the management of clear cell renal cell carcinoma (ccRCC). The study aimed to develop an artificial intelligence (AI)-based, high-efficiency, and high-accuracy ccRCC ISUP Grading Diagnostic System (RIGDAS) and evaluate its clinical application value. A total of 5,697 slides from 1,807 ccRCC patients were collected and digitized for training and validating RIGDAS. Across the training and validation datasets, RIGDAS achieved an AUC ranging from 0.943 (95% CI, 0.927–0.971) to 0.980 (0.960–1.989). In the human-AI comparison and collaboration study, RIGDAS achieved an 0.930 accuracy that was 3.3-4.3% higher than the accuracy of two junior pathologists (0.897, P = 0.004; 0.887, P = 0.001) and was comparable to the accuracy of two senior pathologists (0.960 and 0.970, both P > 0.05). Furthermore, RIGDAS significantly improved the diagnostic accuracy of the two junior pathologists to the level of the senior pathologists and greatly reduced the slide review time for all four pathologists by 20.5-45.1%. RIGDAS demonstrated decent ability in diagnosing ISUP nuclear grading in ccRCC, reducing the likelihood of misdiagnosis by pathologists, and decreasing the time required for pathological slide review, highlighting its potential for clinical application.
 
-
+![Fig2](https://github.com/zqy396/RIGDAS/blob/main/Fig/Fig.%202.tif)
 
 # Data prepare
 The first step is to prepare training dataset. The WSI data should be first segmented to several patches (ROI in ROAM, size is 2048×2048). Patches are then cropped from each ROI and put into pre-trained model to extract features. All the features of patches within a WSI form a bag for training.
