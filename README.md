@@ -40,9 +40,11 @@ We provide examples of splits in ./data_prepare/data_split/ and reference code i
 
 # Training RIGDAS model
 
-python main.py configs/ccRCC.ini s1 exp_code 
+```python main.py configs/ccRCC.ini s1 exp_code```
 
 # Test
+
+```python main.py configs/ccRCC.ini s1``` 
 
 # Visualization
 
@@ -50,6 +52,6 @@ Run the following commond to generate roi-level visualization resutls:
 
 ```python gen_visheatmaps_roi_batch.py visheatmaps/roi_vis/configs/ccRCC.ini s1```
 
-
+![Fig2](https://github.com/zqy396/RIGDAS/blob/main/Fig/Fig4.jpg)
 
 
